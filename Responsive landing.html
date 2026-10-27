@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelEase | Explore More</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #14213d;
+      --blue: #2f6fbe;
+      --sky: #eaf4ff;
+      --text: #243047;
+      --muted: #5f6b7a;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: #f7faff;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 20px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .brand {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    nav .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.96rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #b9dcff;
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 52px 20px 44px;
+      text-align: center;
+      color: var(--white);
+      background: linear-gradient(135deg, #2f6fbe, #4e9bd8);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 0 auto 12px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      height: 240px;
+      object-fit: cover;
+      margin: 24px auto 0;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(13, 35, 65, 0.22);
+    }
+
+    /* Section Heading */
+    .section-heading {
+      text-align: center;
+      padding: 34px 16px 4px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 1.65rem;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 24px 20px 42px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background: var(--white);
+      padding: 24px 20px;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid #e0eaf5;
+      box-shadow: 0 5px 16px rgba(20, 33, 61, 0.06);
+    }
+
+    .box .emoji {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .box h3 {
+      color: var(--blue);
+      margin-bottom: 7px;
+    }
+
+    .box p {
+      color: var(--muted);
+    }
+
+    /* Contact Section */
+    .cta {
+      margin: 0 20px 42px;
+      padding: 28px 20px;
+      border-radius: 14px;
+      text-align: center;
+      background: var(--sky);
+    }
+
+    .cta h2 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 20px;
+      border-radius: 24px;
+      color: var(--white);
+      background: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .cta a:hover,
+    .cta a:focus {
+      background: var(--navy);
+    }
+
+    /* Footer */
+    footer {
+      padding: 18px;
+      text-align: center;
+      color: var(--white);
+      background: var(--navy);
+      font-size: 0.9rem;
+    }
+
+    /* Tablet Layout */
+    @media (min-width: 768px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 18px 5%;
+      }
+
+      .hero {
+        padding: 64px 30px 54px;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero img {
+        height: 320px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 28px 5% 48px;
+      }
+
+      .cta {
+        max-width: 1000px;
+        margin: 0 auto 48px;
+      }
+    }
+
+    /* Laptop Layout */
+    @media (min-width: 1024px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 32px 40px 52px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="brand">TravelEase</div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#features">Why TravelEase</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>Your Next Adventure Starts Here</h1>
+
+      <p>
+        Discover simple, affordable, and memorable travel
+        plans for every kind of explorer.
+      </p>
+
+      <img
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
+        alt="Beautiful mountain landscape"
+      >
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+
+      <div class="section-heading">
+        <h2>Travel Made Simple</h2>
+        <p>Everything you need to plan a smoother trip.</p>
+      </div>
+
+      <div class="features">
+
+        <article class="box">
+          <div class="emoji" aria-hidden="true">🧳</div>
+          <h3>Easy Planning</h3>
+          <p>
+            Organize your trip with a simple and
+            beginner-friendly process.
+          </p>
+        </article>
+
+        <article class="box">
+          <div class="emoji" aria-hidden="true">💸</div>
+          <h3>Budget Friendly</h3>
+          <p>
+            Compare options and find ideas that suit
+            your travel budget.
+          </p>
+        </article>
+
+        <article class="box">
+          <div class="emoji" aria-hidden="true">🗺️</div>
+          <h3>Handpicked Places</h3>
+          <p>
+            Get inspired by exciting destinations,
+            from hills to city escapes.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="cta" id="contact">
+      <h2>Ready to Explore?</h2>
+
+      <p>
+        Start planning your next getaway with TravelEase.
+      </p>
+
+      <a href="mailto:hello@travelease.example">
+        Contact Us
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Made with care by a first-year web development student
+      · TravelEase
+    </p>
+  </footer>
+
+</body>
+</html>
